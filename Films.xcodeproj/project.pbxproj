@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		DD6441AA24D044E800B7266C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6441A924D044E800B7266C /* AppDelegate.swift */; };
 		DD6441AC24D044E800B7266C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6441AB24D044E800B7266C /* SceneDelegate.swift */; };
-		DD6441AE24D044E800B7266C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6441AD24D044E800B7266C /* ViewController.swift */; };
+		DD6441AE24D044E800B7266C /* FilmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6441AD24D044E800B7266C /* FilmListViewController.swift */; };
 		DD6441B124D044E800B7266C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6441AF24D044E800B7266C /* Main.storyboard */; };
 		DD6441B324D044EC00B7266C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6441B224D044EC00B7266C /* Assets.xcassets */; };
 		DD6441B624D044EC00B7266C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6441B424D044EC00B7266C /* LaunchScreen.storyboard */; };
+		DD6441BE24D048C200B7266C /* FilmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6441BD24D048C200B7266C /* FilmData.swift */; };
+		DD6441C324D0500800B7266C /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6441C224D0500800B7266C /* FilmTableViewCell.swift */; };
+		DD6441C624D056DD00B7266C /* CalendarData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD6441C424D056DD00B7266C /* CalendarData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD6441A624D044E800B7266C /* Films.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Films.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6441A924D044E800B7266C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD6441AB24D044E800B7266C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD6441AD24D044E800B7266C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD6441AD24D044E800B7266C /* FilmListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewController.swift; sourceTree = "<group>"; };
 		DD6441B024D044E800B7266C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD6441B224D044EC00B7266C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD6441B524D044EC00B7266C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD6441B724D044EC00B7266C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD6441BD24D048C200B7266C /* FilmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmData.swift; sourceTree = "<group>"; };
+		DD6441C224D0500800B7266C /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FilmTableViewCell.swift; path = Films/Controller/FilmTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		DD6441C524D056DD00B7266C /* CalendarData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalendarData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,40 @@
 			children = (
 				DD6441A924D044E800B7266C /* AppDelegate.swift */,
 				DD6441AB24D044E800B7266C /* SceneDelegate.swift */,
-				DD6441AD24D044E800B7266C /* ViewController.swift */,
-				DD6441AF24D044E800B7266C /* Main.storyboard */,
+				DD6441C024D04E6E00B7266C /* Controller */,
+				DD6441BF24D04E6700B7266C /* Model */,
+				DD6441C124D04E7800B7266C /* View */,
 				DD6441B224D044EC00B7266C /* Assets.xcassets */,
 				DD6441B424D044EC00B7266C /* LaunchScreen.storyboard */,
 				DD6441B724D044EC00B7266C /* Info.plist */,
 			);
 			path = Films;
+			sourceTree = "<group>";
+		};
+		DD6441BF24D04E6700B7266C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD6441C424D056DD00B7266C /* CalendarData.xcdatamodeld */,
+				DD6441BD24D048C200B7266C /* FilmData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD6441C024D04E6E00B7266C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD6441AD24D044E800B7266C /* FilmListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD6441C124D04E7800B7266C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD6441C224D0500800B7266C /* FilmTableViewCell.swift */,
+				DD6441AF24D044E800B7266C /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD6441AE24D044E800B7266C /* ViewController.swift in Sources */,
+				DD6441AE24D044E800B7266C /* FilmListViewController.swift in Sources */,
+				DD6441C624D056DD00B7266C /* CalendarData.xcdatamodeld in Sources */,
 				DD6441AA24D044E800B7266C /* AppDelegate.swift in Sources */,
 				DD6441AC24D044E800B7266C /* SceneDelegate.swift in Sources */,
+				DD6441BE24D048C200B7266C /* FilmData.swift in Sources */,
+				DD6441C324D0500800B7266C /* FilmTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DD6441C424D056DD00B7266C /* CalendarData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DD6441C524D056DD00B7266C /* CalendarData.xcdatamodel */,
+			);
+			currentVersion = DD6441C524D056DD00B7266C /* CalendarData.xcdatamodel */;
+			path = CalendarData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DD64419E24D044E800B7266C /* Project object */;
 }
