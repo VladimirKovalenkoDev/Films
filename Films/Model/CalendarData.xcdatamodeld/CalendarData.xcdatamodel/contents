@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19F96" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="WatchTime" representedClassName="WatchTime" syncable="YES" codeGenerationType="class">
+        <attribute name="filmtitle" attributeType="String"/>
+        <attribute name="watchtime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="watchtimeid" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="WatchTime" positionX="-63" positionY="-18" width="128" height="88"/>
+    </elements>
 </model>

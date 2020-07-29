@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class FilmTableViewCell: UITableViewCell {
 
     @IBOutlet weak var filmPoster: UIImageView!
@@ -15,16 +14,14 @@ class FilmTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pubDateLabel: UILabel!
     
-    @IBOutlet weak var calendarButton: UIButton!
+    
+    @IBOutlet weak var calendarButton: UILabel!
     @IBOutlet weak var overviewText: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
     
     }
     
-    @IBAction func calendarButtonPressed(_ sender: UIButton) {
-        
-    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

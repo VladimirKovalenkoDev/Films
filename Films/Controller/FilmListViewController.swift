@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class FilmListViewController: UITableViewController {
     
     var results = [FilmResults]()
@@ -48,7 +48,16 @@ class FilmListViewController: UITableViewController {
         cell.voteAverageLabel.text = voteAveregeString
         return cell
     }
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCalendar"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let destinationVC = segue.destination as! ViewController
+                destinationVC.titleFilm = results[indexPath.row].title
+            }
+        }
+    }
 }
+
 // MARK: - parsing Json and getting data
 extension FilmListViewController {
     
